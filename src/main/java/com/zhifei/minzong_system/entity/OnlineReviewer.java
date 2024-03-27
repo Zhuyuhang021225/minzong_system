@@ -3,7 +3,6 @@ package com.zhifei.minzong_system.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -14,19 +13,18 @@ import java.util.Date;
 /**
  * @author: Zhuyuhang
  * @Project: minzong_system
- * @Date: 2024年03月22日 11:02
+ * @Date: 2024年03月27日 18:30
  */
-@ApiModel("民宗人员信息对象")
+@ApiModel("网评员队伍数据信息对象")
 @Data
 @Entity
-@Table(name = "personnel")
-@TableName("personnel")
-public class Personnel {
-
+@Table(name = "online_reviewer")
+@TableName(value = "online_reviewer")
+public class OnlineReviewer {
     @Id
     @ApiModelProperty("ID")
-    @TableId(value = "id", type = IdType.AUTO)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @TableId(value = "id", type = IdType.AUTO)
     @Column(columnDefinition = "bigint comment 'id'")
     private Integer id;
 
@@ -34,41 +32,33 @@ public class Personnel {
     @Column(columnDefinition = "varchar(100) comment '所在地区'")
     private String area;
 
-    @ApiModelProperty("机构名称")
-    @Column(columnDefinition = "varchar(100) comment '机构名称'")
-    private String institutionName;
-
-    @ApiModelProperty("内设机构名称")
-    @Column(columnDefinition = "varchar(100) comment '内设机构名称'")
-    private String innerInstitutionName;
-
     @ApiModelProperty("姓名")
     @Column(columnDefinition = "varchar(100) comment '姓名'")
     private String name;
 
-    @ApiModelProperty("职务")
-    @Column(columnDefinition = "varchar(100) comment '职务'")
+    @ApiModelProperty("单位及职务")
+    @Column(columnDefinition = "varchar(100) comment '单位及职务'")
     private String duties;
 
-    @ApiModelProperty("编制")
-    @Column(columnDefinition = "varchar(100) comment '编制'")
-    private String weave;
+    @ApiModelProperty("政治面貌")
+    @Column(columnDefinition = "varchar(100) comment '政治面貌'")
+    private String political;
 
-    @ApiModelProperty("座机号")
-    @Column(columnDefinition = "varchar(100) comment '座机号'")
-    private String landline;
+    @ApiModelProperty("出生年月")
+    @Column(columnDefinition = "varchar(100) comment '出生年月'")
+    private String birthday;
 
     @ApiModelProperty("手机号")
     @Column(columnDefinition = "varchar(100) comment '手机号'")
     private String telephone;
 
-    @ApiModelProperty("学历")
-    @Column(columnDefinition = "varchar(100) comment '学历'")
-    private String degree;
+    @ApiModelProperty("擅长领域")
+    @Column(columnDefinition = "varchar(100) comment '擅长领域'")
+    private String field;
 
-    @ApiModelProperty("政治面貌")
-    @Column(columnDefinition = "varchar(100) comment '政治面貌'")
-    private String politicalOutlook;
+    @ApiModelProperty("备注信息")
+    @Column(columnDefinition = "varchar(500) comment '备注信息'")
+    private String comments;
 
     @ApiModelProperty("创建日期（date）")
 //    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")

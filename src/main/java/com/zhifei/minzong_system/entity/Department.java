@@ -58,9 +58,9 @@ public class Department {
     @Column(columnDefinition = "varchar(100) comment '联系电话'")
     private String telephone;
 
-    @ApiModelProperty("创建日期（yyyy-MM-dd HH:mm:ss）")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    @Column(columnDefinition = "timeStamp comment '创建日期（yyyy-MM-dd HH:mm:ss）'")
+    @ApiModelProperty("创建日期（date）")
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @Column(columnDefinition = "timeStamp comment '创建日期（date）'")
     private Date registerTime;
 
     @ApiModelProperty("审核状态（0 待审核，1 通过， 2 不通过）")

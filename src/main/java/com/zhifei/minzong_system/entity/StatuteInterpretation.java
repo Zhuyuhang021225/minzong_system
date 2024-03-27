@@ -7,57 +7,45 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-
 import javax.persistence.*;
 import java.util.Date;
 
 /**
  * @author: Zhuyuhang
  * @Project: minzong_system
- * @Date: 2024年03月25日 10:56
+ * @Date: 2024年03月27日 17:50
  */
+@ApiModel("民宗宗教政策法规解读对象")
 @Data
 @Entity
-@Table(name = "statute")
-@TableName(value = "statute")
-@ApiModel("政策法规信息对象")
-public class Statute {
-
-    @Id()
+@Table(name = "statue_interpretation")
+@TableName("statue_interpretation")
+public class StatuteInterpretation {
+    @Id
+    @ApiModelProperty("ID")
+    @TableId(value = "id", type = IdType.AUTO)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "bigint comment 'id'")
-    @TableId(type = IdType.AUTO)
     private Integer id;
 
     @ApiModelProperty("政策法规名称")
     @Column(columnDefinition = "varchar(100) comment '政策法规名称'")
     private String name;
 
-    @ApiModelProperty("颁布单位")
-    @Column(columnDefinition = "varchar(100) comment '颁布单位'")
-    private String unit;
-
     @ApiModelProperty("适用领域")
     @Column(columnDefinition = "varchar(100) comment '适用领域'")
     private String field;
 
-    @ApiModelProperty("颁布时间")
-    @Column(columnDefinition = "varchar(100) comment '颁布时间'")
-    private String time;
+    @ApiModelProperty("解读范围")
+    @Column(columnDefinition = "varchar(100) comment '解读范围'")
+    private String interpretationField;
 
-    @ApiModelProperty("性质")
-    @Column(columnDefinition = "varchar(100) comment '性质'")
-    private String quality;
-
-    @ApiModelProperty("备注信息")
-    @Column(columnDefinition = "varchar(1000) comment '备注信息'")
-    private String comments;
+    @ApiModelProperty("解读单位/人")
+    @Column(columnDefinition = "varchar(100) comment '解读单位/人'")
+    private String interpretation;
 
     @ApiModelProperty("创建日期（date）")
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @Column(columnDefinition = "timeStamp comment '创建日期（date）'")
     private Date registerTime;
-
-    @ApiModelProperty("是否同步至小程序")
-    @Column(columnDefinition = "int comment '是否同步至小程序（0 否，1 是'")
-    private Integer sync;
 }
