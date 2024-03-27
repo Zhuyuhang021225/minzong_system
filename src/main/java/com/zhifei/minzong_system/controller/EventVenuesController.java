@@ -2,6 +2,8 @@ package com.zhifei.minzong_system.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.StatuteInterpretation;
+import com.zhifei.minzong_system.entity.religionWorkDataBase.EventVenues;
+import com.zhifei.minzong_system.service.impl.EventVenuesServiceImpl;
 import com.zhifei.minzong_system.service.impl.StatuteInterpretationServiceImpl;
 import com.zhifei.minzong_system.utils.Result;
 import io.swagger.annotations.Api;
@@ -20,23 +22,23 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2024年03月27日 16:16
  */
 @RestController
-@RequestMapping("/statuteInterpretations")
-@Api(tags = {"民宗宗教政策法规解读访问接口"})
-public class StatuteInterpretationController {
+@RequestMapping("/eventVenues")
+@Api(tags = {"宗教活动场所数据信息访问接口"})
+public class EventVenuesController {
 
     @Autowired
-    private StatuteInterpretationServiceImpl statuteInterpretationService;
+    private EventVenuesServiceImpl eventVenuesService;
 
-    @ApiOperation("获取所有宗教政策法规解读")
+    @ApiOperation("获取所有宗教活动场所数据信息")
     @GetMapping()
     @Transactional
-    public Result<Page> getAllStatuteInterpretationPage(@ApiParam(value = "页码") @RequestParam Integer current, @ApiParam(value = "分页大小") @RequestParam Integer pageSize){
+    public Result<Page> getAllEventVenuesPage(@ApiParam(value = "页码") @RequestParam Integer current, @ApiParam(value = "分页大小") @RequestParam Integer pageSize){
         if (current == null || pageSize == null){
-            return Result.error("分页宗教政策法规解读参数错误");
+            return Result.error("分页宗教活动场所数据信息参数错误");
         }
 
-        Page<StatuteInterpretation> allStatuteInterpretationPage = statuteInterpretationService.getAllStatuteInterpretationPage(current, pageSize);
+        Page<EventVenues> allEventVenuesPage = eventVenuesService.getAllEventVenuesPage(current, pageSize);
 
-        return Result.success(allStatuteInterpretationPage);
+        return Result.success(allEventVenuesPage);
     }
 }

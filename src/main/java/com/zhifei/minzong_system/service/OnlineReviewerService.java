@@ -2,8 +2,7 @@ package com.zhifei.minzong_system.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.zhifei.minzong_system.entity.OnlineReviewer;
-import com.zhifei.minzong_system.entity.StatuteInterpretation;
+import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.OnlineReviewer;
 
 /**
  * @author: Zhuyuhang

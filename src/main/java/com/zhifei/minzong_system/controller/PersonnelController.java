@@ -1,9 +1,7 @@
 package com.zhifei.minzong_system.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zhifei.minzong_system.entity.Department;
-import com.zhifei.minzong_system.entity.Personnel;
-import com.zhifei.minzong_system.mapper.PersonnelMapper;
+import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.Personnel;
 import com.zhifei.minzong_system.service.impl.PersonnelServiceImpl;
 import com.zhifei.minzong_system.utils.Result;
 import io.swagger.annotations.Api;

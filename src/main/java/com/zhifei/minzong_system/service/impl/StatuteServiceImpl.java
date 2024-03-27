@@ -3,11 +3,9 @@ package com.zhifei.minzong_system.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zhifei.minzong_system.entity.Personnel;
-import com.zhifei.minzong_system.entity.Statute;
+import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.Statute;
 import com.zhifei.minzong_system.mapper.StatuteMapper;
 import com.zhifei.minzong_system.service.StatuteService;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

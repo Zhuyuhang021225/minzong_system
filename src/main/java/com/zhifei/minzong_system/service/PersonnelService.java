@@ -2,8 +2,7 @@ package com.zhifei.minzong_system.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.zhifei.minzong_system.entity.Department;
-import com.zhifei.minzong_system.entity.Personnel;
+import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.Personnel;
 
 /**
 *@author: Zhuyuhang

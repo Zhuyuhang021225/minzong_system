@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.StatuteInterpretation;
+import com.zhifei.minzong_system.entity.religionWorkDataBase.EventVenues;
+import com.zhifei.minzong_system.mapper.EventVenuesMapper;
 import com.zhifei.minzong_system.mapper.StatuteInterpretationMapper;
+import com.zhifei.minzong_system.service.EventVenuesService;
 import com.zhifei.minzong_system.service.StatuteInterpretationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,18 +18,18 @@ import org.springframework.stereotype.Service;
  * @Date: 2024年03月27日 16:14
  */
 @Service
-public class StatuteInterpretationServiceImpl extends ServiceImpl<StatuteInterpretationMapper, StatuteInterpretation> implements StatuteInterpretationService {
+public class EventVenuesServiceImpl extends ServiceImpl<EventVenuesMapper, EventVenues> implements EventVenuesService {
 
     @Autowired
-    private StatuteInterpretationMapper statuteInterpretationMapper;
+    private EventVenuesMapper eventVenuesMapper;
 
     @Override
-    public Page<StatuteInterpretation> getAllStatuteInterpretationPage(Integer current, Integer pageSize) {
-        Page<StatuteInterpretation> statuteInterpretationPage = new Page<>(current, pageSize);
-        LambdaQueryWrapper<StatuteInterpretation> statuteInterpretationLambdaQueryWrapper = new LambdaQueryWrapper<>();
+    public Page<EventVenues> getAllEventVenuesPage(Integer current, Integer pageSize) {
+        Page<EventVenues> eventVenuesPage = new Page<>(current, pageSize);
+        LambdaQueryWrapper<EventVenues> eventVenuesLambdaQueryWrapper = new LambdaQueryWrapper<>();
 
-        statuteInterpretationMapper.selectPage(statuteInterpretationPage, statuteInterpretationLambdaQueryWrapper);
+        eventVenuesMapper.selectPage(eventVenuesPage, eventVenuesLambdaQueryWrapper);
 
-        return statuteInterpretationPage;
+        return eventVenuesPage;
     }
 }

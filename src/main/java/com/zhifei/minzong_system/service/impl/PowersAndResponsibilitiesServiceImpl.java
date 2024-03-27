@@ -3,12 +3,9 @@ package com.zhifei.minzong_system.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zhifei.minzong_system.entity.PowersAndResponsibilities;
-import com.zhifei.minzong_system.entity.StatuteInterpretation;
+import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.PowersAndResponsibilities;
 import com.zhifei.minzong_system.mapper.PowersAndResponsibilitiesMapper;
-import com.zhifei.minzong_system.mapper.StatuteInterpretationMapper;
 import com.zhifei.minzong_system.service.PowersAndResponsibilitiesService;
-import com.zhifei.minzong_system.service.StatuteInterpretationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

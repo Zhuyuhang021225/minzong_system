@@ -1,10 +1,8 @@
 package com.zhifei.minzong_system.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zhifei.minzong_system.entity.OnlineReviewer;
-import com.zhifei.minzong_system.entity.StatuteInterpretation;
+import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.OnlineReviewer;
 import com.zhifei.minzong_system.service.impl.OnlineReviewerServiceImpl;
-import com.zhifei.minzong_system.service.impl.StatuteInterpretationServiceImpl;
 import com.zhifei.minzong_system.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

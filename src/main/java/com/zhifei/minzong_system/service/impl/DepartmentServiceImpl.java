@@ -3,7 +3,7 @@ package com.zhifei.minzong_system.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zhifei.minzong_system.entity.Department;
+import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.Department;
 import com.zhifei.minzong_system.mapper.DepartmentMapper;
 import com.zhifei.minzong_system.service.DepartmentService;
 import org.apache.logging.log4j.util.Strings;

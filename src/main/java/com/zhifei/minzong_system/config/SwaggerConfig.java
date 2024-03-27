@@ -24,7 +24,7 @@ public class SwaggerConfig {
     public Docket createRestApi() {
         return new Docket(DocumentationType.OAS_30) // v2 不同
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.zhifei.minzong_system.controller")) // 设置扫描路径
+                .apis(RequestHandlerSelectors.basePackage("com.zhifei.minzong_system")) // 设置扫描路径
                 .build()
                 .apiInfo(apiInfo());
     }

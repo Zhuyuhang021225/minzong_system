@@ -1,7 +1,7 @@
 package com.zhifei.minzong_system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.zhifei.minzong_system.entity.Department;
+import com.zhifei.minzong_system.entity.minzongWorkDepartmentDataBase.Department;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
